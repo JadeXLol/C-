@@ -12,7 +12,7 @@
     if (y > 0){
         y_positive =1;
     }
-    
+        
     if ((x_positive == 1) && (y_positive == 1)){
         cout << "1";
     }
