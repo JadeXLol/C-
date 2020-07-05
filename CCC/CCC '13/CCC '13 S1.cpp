@@ -1,69 +1,40 @@
 #include <bits/stdc++.h>
  
 using namespace std; 
-int main() { 
-int input;
-int a = 0;
-int b = 0;
-cin >> input;
 
-while(a != 1){
-    input = input + b;
-    b++;
-    int digit1 = (input%10);
-    int digit2 = (input%100 - digit1)/10;
-    int digit3 = (input%1000 - digit2*10 - digit1)/100;
-    int digit4 = (input%10000 - digit3*100 - digit2*10 - digit1)/1000;
-    int digit5 = (input%100000 - digit4*1000 - digit3*100 - digit2*10 - digit1)/10000;
+int digit_total = 0;
+int input, current_year;
+set <int> digit_set;
+bool bool_1 = 0;
 
-
-    if (digit5 != 0){
-        vector <int> vect = {digit5, digit4, digit3, digit2, digit1};
-        if (vect[0] != vect[1] != vect[2] != vect[3] != vect[4]){
-            a = 1;
-            for (auto item : vect) {
-                cout << item;
-                }
-            }
-        } 
-    else if (digit4 != 0){
-        vector <int> vect = {digit4, digit3, digit2, digit1};
-        if (vect[0] != vect[1] != vect[2] != vect[3]){
-            a = 1;
-            for (auto item : vect) {
-                cout << item;
-                }        
-            }
-        }
-    else if (digit3 != 0){	
-        vector <int> vect = {digit3, digit2, digit1};
-        if (vect[0] != vect[1] != vect[2]){
-            a = 1;
-            for (auto item : vect) {
-                cout << item;
-                } 
-            }
-        }
-    else if (digit2 != 0){
-        vector <int> vect = {digit2, digit1};
-        if (vect[0] != vect[1]){
-            a = 1;
-            for (auto item : vect) {
-                cout << item;
-                } 
-            }
-        }
-    else {
-        vector <int> vect = {digit2, digit1};
-        if (vect[0] != vect[1]){
-            a = 1;
-            for (auto item : vect) {
-                cout << item;
-                } 
-            }
-        }
+void getvalues() {
+    int digit = 0, copy_thing = current_year;
+    digit_total = 0;
+    while (copy_thing > 0){
+        digit_total++;
+        digit = copy_thing%10;
+        digit_set.insert(digit);
+        copy_thing= copy_thing/10;
     }
+}
 
+void calculate() {
+    int temp=digit_set.size();
+    if  (temp == digit_total){
+        bool_1 = 1;
+    }else{
+        digit_set.clear();
+    }
+}
 
+int main(){ 
+    cin >> input;
+    current_year = input;
+    while (bool_1 != 1){
+        current_year++;
+        getvalues();
+        calculate();
+    }
+    cout << current_year;
     return 0;
-}   
+}

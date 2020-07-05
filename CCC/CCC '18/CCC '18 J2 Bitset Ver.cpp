@@ -10,12 +10,6 @@ int main() {
     cin >> today;
     int counter = 0;
 
-
-    for (int i = 0; i < 100; i++){
-        bits_yesterday.set(i, 0);
-        bits_today.set(i, 0); 
-    }
-
     for (int i = 0; i < a; i++){
         if (yesterday[i] == 'C'){
             bits_yesterday.set(i,1);
@@ -33,5 +27,5 @@ int main() {
 
     cout << counter;
 
-return 0; 
+    return 0; 
 }
