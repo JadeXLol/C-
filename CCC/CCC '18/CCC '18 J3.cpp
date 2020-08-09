@@ -2,15 +2,15 @@
  
 using namespace std; 
 int main() { 
-    int distance[4];
+    int dis[4];
 
-    cin >> distance[0] >> distance[1] >> distance[2] >> distance[3];
+    cin >> dis[0] >> dis[1] >> dis[2] >> dis[3];
 
-    cout << "0" << " " << distance[0] << " " << distance[0]+distance[1] << " " << distance[0]+distance[1]+distance[2] << " " << distance[0]+distance[1]+distance[2]+distance[3] << endl;
-    cout << distance[0] << " " << "0" << " " << distance[1] << " " << distance[1]+distance[2] << " " << distance[1]+distance[2]+distance[3] << endl;
-    cout << distance[0]+distance[1] << " " << distance[1] << " " << "0" << " " << distance[2] << " " << distance[2]+distance[3] << endl;
-    cout << distance[0]+distance[1]+distance[2] << " " << distance[1]+distance[2] << " " << distance[2] << " " << "0" << " " << distance[3] << endl;
-    cout << distance[0]+distance[1]+distance[2]+distance[3] << " " << distance[1]+distance[2]+distance[3] << " " << distance[2]+distance[3] << " " << distance[3] << " " << "0" << endl;
+    cout << "0" << " " << dis[0] << " " << dis[0]+dis[1] << " " << dis[0]+dis[1]+dis[2] << " " << dis[0]+dis[1]+dis[2]+dis[3] << endl;
+    cout << dis[0] << " " << "0" << " " << dis[1] << " " << dis[1]+dis[2] << " " << dis[1]+dis[2]+dis[3] << endl;
+    cout << dis[0]+dis[1] << " " << dis[1] << " " << "0" << " " << dis[2] << " " << dis[2]+dis[3] << endl;
+    cout << dis[0]+dis[1]+dis[2] << " " << dis[1]+dis[2] << " " << dis[2] << " " << "0" << " " << dis[3] << endl;
+    cout << dis[0]+dis[1]+dis[2]+dis[3] << " " << dis[1]+dis[2]+dis[3] << " " << dis[2]+dis[3] << " " << dis[3] << " " << "0" << endl;
 
     return 0; 
 }

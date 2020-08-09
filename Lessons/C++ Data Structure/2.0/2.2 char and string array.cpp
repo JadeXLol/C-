@@ -39,5 +39,24 @@ int main() {
         cout << "jesus u like men " << found << endl;
     else 
         cout << "ok you don't like men" << endl;
+    
     return 0; 
+}
+
+void insert_combine_string(){
+    string str = "Hello";
+    
+    //insertion into string
+    str = str.insert(5, "This is an insertion");
+    cout << str << endl;
+
+    //combine string
+    str += "AAAA";
+    str = str + "AAAA";
+    str.append("BBBB");
+    cout << str << endl;
+
+    //combine char
+    str.push_back('A');
+    cout << str << endl;
 }
