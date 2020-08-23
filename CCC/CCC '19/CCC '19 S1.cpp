@@ -36,7 +36,7 @@ int main() {
     for (int i = 0; i<int(input.length()); i++){
         if (input[i] == 'H'){
             H_total += 1;
-        }else if (input[i] == 'V'){
+        }else{
             V_total += 1;
         }
     }
