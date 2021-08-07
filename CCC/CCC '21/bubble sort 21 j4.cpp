@@ -3,17 +3,17 @@
 using namespace std; 
 
 int main() { 
-    int n = 8;
-    int array[n] = {6, 3, 9, 8, 4, 6, 5, 2};
+    int n = 8, counter = 0;
+    string array;
     for(int a = 0; a < n; a++) {
         for(int i = 0; i < n-1; i++) {
-            if(array[i] < array[i+1]) {
+            if(array[i] > array[i+1]) {
+                counter++;
                 swap(array[i], array[i+1]);
             }
         }
     }
-    for(auto item : array){
-        cout << item;
-    }
+
+    cout << counter;
     return 0; 
 }

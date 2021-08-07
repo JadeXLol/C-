@@ -21,31 +21,30 @@ int main() {
         cout << "Index: " << distance(array,itr) << endl;
     } else {
         cout << "Not found!" << endl;
-    }
+    };
 
-    // void search_vector(){
-    //     vector <int> int_vect = {1, 2, 3, 4, 5};
-    //     int target_int = 5;
+    void search_vector(){
+        vector <int> int_vect = {1, 2, 3, 4, 5};
+        int target_int = 5;
 
-    //     auto itr = find(int_vect.begin(), int_vect.end(), target_int);
-    //     if (itr != int_vect.end()){
-    //         cout << "Found '" << *itr << "' in array" << endl;
-    //     } else {
-    //         cout << "Not found!" << endl;
-    //     }
-    // }   
-
-    // void search_string(){
-    //     string str = "your mother";
-    //     auto found = string.find("mother");
-    //     if (found != string::npos){
-    //         cout << "index of word = " << found << endl;
-    //     }
-    //     else {
-    //         cout << "not found" << endl;
-    //     }
-    // } 
-        
+        auto itr = find(int_vect.begin(), int_vect.end(), target_int);
+        if (itr != int_vect.end()){
+            cout << "Found '" << *itr << "' in array" << endl;
+        } else {
+            cout << "Not found!" << endl;
+        }
+    }   
 
     return 0; 
 }
+
+void search_string(){
+        string str = "your mother";
+        auto found = string.find("mother");
+        if (found != string::npos){
+            cout << "index of word = " << found << endl;
+        }
+        else {
+            cout << "not found" << endl;
+        }
+    } 
