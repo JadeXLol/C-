@@ -5,22 +5,22 @@ using namespace std;
 const int NUM_VERTICES = 5;
 int graph_array[NUM_VERTICES][NUM_VERTICES] = {};
 
-void add_directed(int a, int b){
-    graph_array[a][b] = 1;
+void add_directed(int source_vertex, int target_vertex){
+    graph_array[source_vertex][target_vertex] = 1;
 }
 
-void add_undirected(int a, int b){
-    graph_array[a][b] = 1;
-    graph_array[b][a] = 1;
+void add_undirected(int source_vertex, int target_vertex){
+    graph_array[source_vertex][target_vertex] = 1;
+    graph_array[target_vertex][source_vertex] = 1;
 }
 
-void add_weighted_direct(int a, int b, int c){
-    graph_array[a][b] = c;
+void add_weighted_direct(int source_vertex, int target_vertex, int weight){
+    graph_array[source_vertex][target_vertex] = weight;
 }
 
-void add_weighted_undirect(int a, int b, int c){
-    graph_array[a][b] = c;
-    graph_array[b][a] = c;
+void add_weighted_undirect(int source_vertex, int target_vertex, int weight){
+    graph_array[source_vertex][target_vertex] = weight;
+    graph_array[target_vertex][source_vertex] = weight;
 }
 
 void output(){

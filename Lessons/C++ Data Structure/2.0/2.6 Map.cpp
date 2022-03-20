@@ -15,7 +15,7 @@ int main() {
 
 //acess both items automatically
     for (auto &item : my_map) {
-        cout << item.first << " " << item.second << endl;
+        cout << item.first << "" << item.second << endl;
     }
 
 //add an entry
